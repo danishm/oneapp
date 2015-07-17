@@ -13,5 +13,7 @@ libraries:
 handlers:
 - url: /data
   static_dir: data
+- url: /icons
+  static_dir: icons
 - url: /.*
   script: app.app
