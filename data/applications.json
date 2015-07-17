@@ -1,0 +1,6 @@
+applications: [
+  {
+     name: "Facebook",
+     url: "http://www.facebook.com"
+  }
+]
