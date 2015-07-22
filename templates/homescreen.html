@@ -2,7 +2,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>OneApp - The only app you'll ever need</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -15,11 +17,22 @@
 
 </head>
 <body>
-    <h1>Homescreen</h1>
-    <ul>
-        {% for app in applications %}
-        <li>{{ app.name }}</li>
-        {% endfor %}
-    </ul>
+    <div class="container-fluid">
+        <br/>
+        <row>
+            {% for app in applications %}
+
+            <div class="col-xs-4">
+                <div class="thumbnail">
+                  <a href="{{app.url}}"><img src="icons/{{app.key}}.png"></a>
+                  <div class="caption">
+                     <a href="{{app.url}}"><p style="text-align:center">{{ app.name }}</p></a>
+                  </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </row>
+    </div>
 </body>
 </html>

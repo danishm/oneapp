@@ -23,6 +23,16 @@ applications = [
         'key': 'gmail',
         'name': 'Gmail',
         'url': 'https://www.google.com/maps/'
+    },
+    {
+        'key': 'google',
+        'name': 'Google',
+        'url': 'https://www.google.com/'
+    },
+    {
+        'key': 'weather-channel',
+        'name': 'Weather Channel',
+        'url': 'http://m.weather.com/'
     }
 
 ]

@@ -1,4 +1,4 @@
-application: oneapp
+application: oneapp-dev
 version: alpha-001
 runtime: python27
 api_version: 1
