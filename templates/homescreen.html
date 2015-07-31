@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+
     <meta charset="UTF-8">
     <title>OneApp - The only app you'll ever need</title>
 
@@ -15,15 +16,21 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <style>
+        .oneapp-icon {
+            border: none;
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
         <br/>
-        <row>
+        <div class="row">
             {% for app in applications %}
 
             <div class="col-xs-4">
-                <div class="thumbnail">
+                <div class="oneapp-icon thumbnail">
                   <a href="{{app.url}}"><img src="icons/{{app.key}}.png"></a>
                   <div class="caption">
                      <a href="{{app.url}}"><p style="text-align:center">{{ app.name }}</p></a>
@@ -31,8 +38,12 @@
                 </div>
             </div>
 
+            {% if loop.index%3==0 %}
+            </div><div class="row">
+            {% endif %}
+
             {% endfor %}
-        </row>
+        </div>
     </div>
 </body>
 </html>

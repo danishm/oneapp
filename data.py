@@ -22,7 +22,7 @@ applications = [
     {
         'key': 'gmail',
         'name': 'Gmail',
-        'url': 'https://www.google.com/maps/'
+        'url': 'https://mail.google.com/'
     },
     {
         'key': 'google',
@@ -33,6 +33,21 @@ applications = [
         'key': 'weather-channel',
         'name': 'Weather Channel',
         'url': 'http://m.weather.com/'
+    },
+    {
+        'key': 'mta',
+        'name': 'NYC Subway',
+        'url': 'http://m.mta.info/'
+    },
+    {
+        'key': 'google-news',
+        'name': 'News',
+        'url': 'https://news.google.com/'
+    },
+    {
+        'key': 'reddit',
+        'name': 'Reddit',
+        'url': 'https://m.reddit.com/'
     }
 
 ]
