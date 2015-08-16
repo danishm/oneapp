@@ -48,6 +48,24 @@ applications = [
         'key': 'reddit',
         'name': 'Reddit',
         'url': 'https://m.reddit.com/'
+    },
+    {
+        'key': 'nytimes',
+        'name': 'New York Times',
+        'url': 'http://mobile.nytimes.com/'
     }
 
 ]
+
+APP_MAP = None
+
+
+def get_application_map():
+    global APP_MAP
+
+    if APP_MAP is None:
+        APP_MAP = {}
+        for app in applications:
+            APP_MAP[app['key']] = app
+
+    return APP_MAP
