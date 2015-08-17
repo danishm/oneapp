@@ -6,6 +6,7 @@ import webapp2
 
 import data
 import models
+import analytics
 
 
 class HomeScreen(webapp2.RequestHandler):
@@ -25,7 +26,9 @@ class LinkRouter(webapp2.RequestHandler):
         click_event = models.ClickEvent()
         click_event.app_key = app['key']
         click_event.put()
-        print 'Click Event Saved'
+
+        # Sending analytics event
+        analytics.track_event_to_ga('ClickEvent', key, app['name'])
 
         return webapp2.redirect(app['url'])
 

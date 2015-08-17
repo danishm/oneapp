@@ -1,6 +1,8 @@
 """A function that posts a tracking event to Google Analytics."""
 
 import urllib
+import logging
+
 from google.appengine.api import urlfetch
 
 # Set this to the specific Google Analytics Tracking Id for your application.
@@ -26,4 +28,7 @@ def track_event_to_ga(category, action, label=None, value=None):
                             payload=form_data,
                             method=urlfetch.POST,
                             headers={"Content-Type": "application/x-www-form-urlencoded"})
+
+    logging.info('Recorded GA Event [fields: %s, result: %s]', form_fields, result.status_code )
+
     return result.status_code
