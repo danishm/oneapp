@@ -53,6 +53,11 @@ applications = [
         'key': 'nytimes',
         'name': 'New York Times',
         'url': 'http://mobile.nytimes.com/'
+    },
+    {
+        'key': 'quora',
+        'name': 'Quora',
+        'url': 'https://www.quora.com/'
     }
 
 ]
